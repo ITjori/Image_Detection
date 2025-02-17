@@ -1,52 +1,50 @@
-# Image Detection Using Teachable Machine
+# Teachable Machine and Web Technologies: AI-Based Image Detection
 
-In this project, I utilized Teachable Machine AI to create an image detection system that allows users to upload an image for classification. The system is integrated with a web interface (HTML, CSS, JavaScript) and a database (MySQL using XAMPP) to store detection data. The main objective was to develop an image upload-based detection system while ensuring accurate classification and proper database management.
+## Overview
 
-## How It Works
-**1. Web Interface (HTML, CSS, JavaScript)**
+The goal of this project is to connect Teachable Machine with a web application that recognizes users and objects through a camera. The system processes the detected results and stores the final output in a MySQL database as well as XAMPP. The main objective was to construct an image capturing system capable of image recognition, predicting objects, and recording detections into a database in real time.
 
--The index.html file provides a user-friendly interface where users can upload an image.
+## How to Do It
+**Step 1: Design a Website**
 
--The uploaded image is displayed in the browser for preview.
+-Created an HTML interface with user interface elements such as buttons for starting the camera, taking pictures, and showing results.
 
--A Predict button triggers AI-based classification.
+-CSS was applied to the webpage to improve the user's interaction.
 
--The detection results are shown on the webpage, along with a detection counter that tracks the number of detected images.
+-A new JavaScript command was added to allow the webcam to be accessed so that images from the video could be captured.
 
-**2. AI Model Integration (Teachable Machine & JavaScript)**
+-The webpage was also decorated with Teachable Machine model for predictions within the webpage.
 
--The AI model is loaded from model.json and metadata.json.
+**Step 2: The Loading and Application of the AI Model**
 
--When a user uploads an image, the model predicts the most probable class.
+-Imported the Teachable Machine model that was made available on the internet.
 
--The highest probability class name is displayed along with its confidence level.
+-Used image Tensors for loading images and making predictions in Javascript and TensorFlow.js.
 
-**3. Database Integration (MySQL + PHP + XAMPP)**
+-Wrote code to take a picture, pre-process it correctly and pass it to the AI model for inference.
 
--The detection results (class name and detection count) are stored in a MySQL database.
+-Prediction results with associated confidence scores were rendered on the webpage.
 
--PHP scripts (update_counter.php, reset_counter.php) handle database updates via AJAX requests from JavaScript.
+**Step 3: Building and Linking the Database**
 
--A table detection_log is used to keep a record of each detection with a timestamp.
+-Built a mySQL database called 'TMPro' using phpMyAdmin in XAMPP.
 
+-Constructed tables to save detection logs and other counters associated with the number of times detections were made.
 
-## Key Functionalities
-**Image Upload & Preview**
+-Setup a MySQL driven backend using PHP programming language for managing the database.
 
-Users can upload an image, which is displayed in the browser.
+**Step 4: Saving Detection Results into the Database**
 
-**AI Prediction Using Teachable Machine**
+-Developed PHP scripts (update_counter.php and reset_counter.php) to update the database.
 
-The AI model classifies the uploaded image and displays the result.
+-When the object is detected the detection count and class name is added into the database.
 
-**Detection Counter System**
+-Add detection reset function to deletion of counts when appropriate.
 
--A counter keeps track of the number of images detected.
+**Step 5: Debugging and Managing Data in the System Simultaneously**
 
--The counter is stored in the database and can be reset using the Reset Counter button.
+-Wrote Javascript code to carry out AJAX requests for dynamically updating the detection counter.
 
-**Database Logging**
+-Changed the UI in response to events without refreshing the page.
 
--Each detection is stored in a MySQL database with a timestamp.
-
--The counter updates dynamically in the database.
+-Resolved connection problems associated with Javascript and PHP and MySQL interactions.
