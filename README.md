@@ -24,7 +24,6 @@ This project integrates Teachable Machine with a web-based AI-powered detection 
 -Wrote code to capture an image from the webcam, convert it into a suitable format, and send it to the AI model for inference.
 
 -Prediction results with associated confidence scores were rendered on the webpage.
-Imported the Teachable Machine model hosted online, including model.json and metadata.json files.
 
 **Step 3: Building and Linking the Database**
 
