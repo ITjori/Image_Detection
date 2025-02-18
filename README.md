@@ -1,8 +1,8 @@
-# Teachable Machine and Web Technologies: AI-Based Image Detection
+# Teachable Machine and Web Technologies: AI-Based Webcam Prediction
 
 ## Overview
 
-The goal of this project is to connect Teachable Machine with a web application that recognizes users and objects through a camera. The system processes the detected results and stores the final output in a MySQL database as well as XAMPP. The main objective was to construct an image capturing system capable of image recognition, predicting objects, and recording detections into a database in real time.
+This project integrates Teachable Machine with a web-based AI-powered detection system that uses a webcam to recognize objects in real time. The system captures images, processes predictions, and logs detection results into a MySQL database managed through XAMPP. The objective is to create an interactive AI-driven recognition platform capable of identifying objects via a web interface and efficiently storing detection data for analysis.
 
 ## How to Do It
 **Step 1: Design a Website**
@@ -21,9 +21,10 @@ The goal of this project is to connect Teachable Machine with a web application 
 
 -Used image Tensors for loading images and making predictions in Javascript and TensorFlow.js.
 
--Wrote code to take a picture, pre-process it correctly and pass it to the AI model for inference.
+-Wrote code to capture an image from the webcam, convert it into a suitable format, and send it to the AI model for inference.
 
 -Prediction results with associated confidence scores were rendered on the webpage.
+Imported the Teachable Machine model hosted online, including model.json and metadata.json files.
 
 **Step 3: Building and Linking the Database**
 
